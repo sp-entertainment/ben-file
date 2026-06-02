@@ -1,0 +1,57 @@
+REMINDERS
+Feeling overwelmed is a sign that I need to get organized.
+Eat the elephant one bite at a time.
+Repetition makes speed
+
+
+WORKING QUEUE
+O - Create lg tv remote app
+- Create vs code extension for rendering todo notes
+O - Read paper and pass to AI to help me write a leter requesting all evidence
+	O - Scan leter
+	- Start gemini chat
+- Submit fillings(due soon)
+- Call providers over medical claims
+	3 claims
+	ask to refile with referral
+
+
+WAITING QUEUE
+- Fill out aetna survey email
+	- write down thoughts and pass to AI to summarize
+	- fill out form on website
+
+
+DONE
+X - Work with Claude code for a week(03/09/2026)
+	X - investigate plugins
+
+
+DIRECTION
+Get finances in a balanced state
+
+
+TV REMOTE CONTROL APP
+Features
+	light and dark mode
+
+
+ECHOS APP MVP
+Description
+An app that will allow the user to add quotes(quote, author(preset to self)), those quotes will be shown at a set interval via notifications to the user. The app will allow the user to delete their quotes as well. 
+
+Screens
+	MAIN
+	Shows a vertical list of quotes. A + sign to add a quote, a - sign to delete a quote or multiple quotes. Shows a gear icon for configuration.
+
+	ADD QUOTE DIALOG
+	Shows a text field for the quote and a text field for the author(preset to self).
+
+Names
+	Echos
+	Quotes
+	Echo
+
+		
+REMINDERS
+Have fun

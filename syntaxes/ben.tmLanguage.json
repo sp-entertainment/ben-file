@@ -1,0 +1,83 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Ben",
+	"scopeName": "source.ben",
+	"patterns": [
+		{ "include": "#task-done" },
+		{ "include": "#task-active" },
+		{ "include": "#task-waiting" },
+		{ "include": "#task-plain" },
+		{ "include": "#heading" },
+		{ "include": "#note" }
+	],
+	"repository": {
+		"meta-info": {
+			"match": "(\\([^)]*\\))",
+			"name": "string.quoted.other.ben"
+		},
+
+		"heading": {
+			"match": "^\\s*([A-Z][A-Z0-9 /&]+)\\s*$",
+			"captures": {
+				"1": { "name": "markup.heading.ben" }
+			}
+		},
+
+		"task-done": {
+			"match": "^(\\s*)(X)(\\s+)(-)(\\s+)(.*)$",
+			"captures": {
+				"2": { "name": "keyword.control.ben" },
+				"4": { "name": "punctuation.definition.list.begin.ben" },
+				"6": {
+					"name": "meta.task.ben",
+					"patterns": [{ "include": "#meta-info" }]
+				}
+			}
+		},
+
+		"task-active": {
+			"match": "^(\\s*)(O)(\\s+)(-)(\\s+)(.*)$",
+			"captures": {
+				"2": { "name": "markup.inserted.ben" },
+				"4": { "name": "punctuation.definition.list.begin.ben" },
+				"6": {
+					"name": "meta.task.ben",
+					"patterns": [{ "include": "#meta-info" }]
+				}
+			}
+		},
+
+		"task-waiting": {
+			"match": "^(\\s*)(W)(\\s+)(-)(\\s+)(.*)$",
+			"captures": {
+				"2": { "name": "markup.changed.ben" },
+				"4": { "name": "punctuation.definition.list.begin.ben" },
+				"6": {
+					"name": "meta.task.ben",
+					"patterns": [{ "include": "#meta-info" }]
+				}
+			}
+		},
+
+		"task-plain": {
+			"match": "^(\\s*)(-)(\\s+)(.*)$",
+			"captures": {
+				"2": { "name": "punctuation.definition.list.begin.ben" },
+				"4": {
+					"name": "meta.task.ben",
+					"patterns": [{ "include": "#meta-info" }]
+				}
+			}
+		},
+
+		"note": {
+			"match": "^(\\s*)(.+)$",
+			"captures": {
+				"2": {
+					"name": "string.unquoted.ben",
+					"patterns": [{ "include": "#meta-info" }]
+				}
+			}
+		}
+	}
+}

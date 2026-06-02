@@ -1,0 +1,13 @@
+HEADING
+Note
+    Nested note
+
+- task that is not started
+X - task that is done
+O - task that is actively being worked on
+W - task that is waiting for something
+- task with meta information(meta information here, due date, links to websites, etc)
+
+- parent task
+    - nested task
+        - another nested task, nested levels can be infinite. All items(tasks, headings, notes, etc.) can have nested children.

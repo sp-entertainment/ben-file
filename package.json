@@ -1,0 +1,53 @@
+{
+  "name": "ben-file",
+  "displayName": "Ben File",
+  "description": "Extension that supports the ben file type.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ben",
+        "aliases": ["Ben", "ben"],
+        "extensions": [".ben"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ben",
+        "scopeName": "source.ben",
+        "path": "./syntaxes/ben.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "test:grammar": "npm run compile && mocha out/test/grammar.test.js --ui tdd --timeout 10000"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.75.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3",
+    "mocha": "^11.7.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  }
+}
