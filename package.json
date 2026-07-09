@@ -9,8 +9,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -26,28 +24,12 @@
         "scopeName": "source.ben",
         "path": "./syntaxes/ben.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "ben",
+        "path": "./snippets/ben.code-snippets"
+      }
     ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test",
-    "test:grammar": "npm run compile && mocha out/test/grammar.test.js --ui tdd --timeout 10000"
-  },
-  "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "@types/vscode": "^1.75.0",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2",
-    "eslint": "^9.39.3",
-    "mocha": "^11.7.5",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1",
-    "vscode-oniguruma": "^2.0.1",
-    "vscode-textmate": "^9.3.2"
   }
 }

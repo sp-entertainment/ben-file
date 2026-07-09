@@ -1,83 +1,145 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Ben",
+	"name": "Ben Notes Format",
 	"scopeName": "source.ben",
 	"patterns": [
-		{ "include": "#task-done" },
-		{ "include": "#task-active" },
-		{ "include": "#task-waiting" },
-		{ "include": "#task-plain" },
-		{ "include": "#heading" },
-		{ "include": "#note" }
+		{
+			"include": "#section-headers"
+		},
+		{
+			"include": "#task-done"
+		},
+		{
+			"include": "#task-active"
+		},
+		{
+			"include": "#task-waiting"
+		},
+		{
+			"include": "#task-target"
+		},
+		{
+			"include": "#task-notstarted"
+		},
+		{
+			"include": "#urls"
+		}
 	],
 	"repository": {
-		"meta-info": {
-			"match": "(\\([^)]*\\))",
-			"name": "string.quoted.other.ben"
+		"section-headers": {
+			"patterns": [
+				{
+					"name": "markup.heading.ben",
+					"match": "^[A-Z][A-Z ]*$"
+				},
+				{
+					"name": "markup.heading.child.ben",
+					"match": "^\\s+[A-Z][A-Z ]*$"
+				}
+			]
 		},
-
-		"heading": {
-			"match": "^\\s*([A-Z][A-Z0-9 /&]+)\\s*$",
-			"captures": {
-				"1": { "name": "markup.heading.ben" }
-			}
-		},
-
 		"task-done": {
-			"match": "^(\\s*)(X)(\\s+)(-)(\\s+)(.*)$",
-			"captures": {
-				"2": { "name": "keyword.control.ben" },
-				"4": { "name": "punctuation.definition.list.begin.ben" },
-				"6": {
-					"name": "meta.task.ben",
-					"patterns": [{ "include": "#meta-info" }]
+			"patterns": [
+				{
+					"name": "markup.bold.done.ben",
+					"match": "^(\\s*)(X)(\\s*-\\s*)(.*)$",
+					"captures": {
+						"2": {
+							"name": "keyword.control.done.ben"
+						},
+						"3": {
+							"name": "punctuation.separator.ben"
+						},
+						"4": {
+							"name": "entity.name.task.done.ben"
+						}
+					}
 				}
-			}
+			]
 		},
-
 		"task-active": {
-			"match": "^(\\s*)(O)(\\s+)(-)(\\s+)(.*)$",
-			"captures": {
-				"2": { "name": "markup.inserted.ben" },
-				"4": { "name": "punctuation.definition.list.begin.ben" },
-				"6": {
-					"name": "meta.task.ben",
-					"patterns": [{ "include": "#meta-info" }]
+			"patterns": [
+				{
+					"name": "markup.bold.active.ben",
+					"match": "^(\\s*)(O)(\\s*-\\s*)(.*)$",
+					"captures": {
+						"2": {
+							"name": "keyword.control.active.ben"
+						},
+						"3": {
+							"name": "punctuation.separator.ben"
+						},
+						"4": {
+							"name": "entity.name.task.active.ben"
+						}
+					}
 				}
-			}
+			]
 		},
-
 		"task-waiting": {
-			"match": "^(\\s*)(W)(\\s+)(-)(\\s+)(.*)$",
-			"captures": {
-				"2": { "name": "markup.changed.ben" },
-				"4": { "name": "punctuation.definition.list.begin.ben" },
-				"6": {
-					"name": "meta.task.ben",
-					"patterns": [{ "include": "#meta-info" }]
+			"patterns": [
+				{
+					"name": "markup.bold.waiting.ben",
+					"match": "^(\\s*)(W)(\\s*-\\s*)(.*)$",
+					"captures": {
+						"2": {
+							"name": "keyword.control.waiting.ben"
+						},
+						"3": {
+							"name": "punctuation.separator.ben"
+						},
+						"4": {
+							"name": "entity.name.task.waiting.ben"
+						}
+					}
 				}
-			}
+			]
 		},
-
-		"task-plain": {
-			"match": "^(\\s*)(-)(\\s+)(.*)$",
-			"captures": {
-				"2": { "name": "punctuation.definition.list.begin.ben" },
-				"4": {
-					"name": "meta.task.ben",
-					"patterns": [{ "include": "#meta-info" }]
+		"task-target": {
+			"patterns": [
+				{
+					"name": "markup.bold.target.ben",
+					"match": "^(\\s*)(T)(\\s*-\\s*)(.*)$",
+					"captures": {
+						"2": {
+							"name": "keyword.control.target.ben"
+						},
+						"3": {
+							"name": "punctuation.separator.ben"
+						},
+						"4": {
+							"name": "entity.name.task.target.ben"
+						}
+					}
 				}
-			}
+			]
 		},
-
-		"note": {
-			"match": "^(\\s*)(.+)$",
-			"captures": {
-				"2": {
-					"name": "string.unquoted.ben",
-					"patterns": [{ "include": "#meta-info" }]
+		"task-notstarted": {
+			"patterns": [
+				{
+					"name": "markup.bold.notstarted.ben",
+					"match": "^(\\s*)(-)(\\s+)(.*)$",
+					"captures": {
+						"2": {
+							"name": "keyword.control.notstarted.ben"
+						},
+						"3": {
+							"name": "punctuation.separator.ben"
+						},
+						"4": {
+							"name": "entity.name.task.notstarted.ben"
+						}
+					}
 				}
-			}
+			]
+		},
+		"urls": {
+			"patterns": [
+				{
+					"name": "markup.underline.link.ben",
+					"match": "https?://[^\\s]+"
+				}
+			]
 		}
 	}
 }

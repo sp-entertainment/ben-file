@@ -1,7 +1,9 @@
 HEADING
 Note
-    Nested note
-
+    CHILD HEADING
+    Note
+        Nested note
+    
 - task that is not started
 X - task that is done
 O - task that is actively being worked on
@@ -11,3 +13,8 @@ W - task that is waiting for something
 - parent task
     - nested task
         - another nested task, nested levels can be infinite. All items(tasks, headings, notes, etc.) can have nested children.
+
+TASKS ARE PRIORITIZED FROM TOP TO BOTTOM
+- HIGH PRIORITY
+- MEDIUM PRIORITY
+- LOW PRIORITY

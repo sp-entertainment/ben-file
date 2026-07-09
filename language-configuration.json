@@ -1,18 +1,8 @@
 {
-	"brackets": [
-		["(", ")"]
-	],
-	"autoClosingPairs": [
-		{ "open": "(", "close": ")" }
-	],
-	"surroundingPairs": [
-		["(", ")"]
-	],
-	"folding": {
-		"offSide": true
-	},
-	"indentationRules": {
-		"increaseIndentPattern": "^.*$",
-		"decreaseIndentPattern": "^\\s+.*$"
-	}
+    "comments": {
+        // .ben format doesn't have formal comments
+    },
+    "brackets": [],
+    "autoClosingPairs": [],
+    "surroundingPairs": []
 }
