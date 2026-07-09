@@ -9,8 +9,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
@@ -25,6 +23,12 @@
         "language": "ben",
         "scopeName": "source.ben",
         "path": "./syntaxes/ben.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "ben",
+        "path": "./snippets/ben.code-snippets"
       }
     ]
   },

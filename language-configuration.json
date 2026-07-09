@@ -7,12 +7,5 @@
 	],
 	"surroundingPairs": [
 		["(", ")"]
-	],
-	"folding": {
-		"offSide": true
-	},
-	"indentationRules": {
-		"increaseIndentPattern": "^.*$",
-		"decreaseIndentPattern": "^\\s+.*$"
-	}
+	]
 }
