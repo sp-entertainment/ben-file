@@ -1,8 +1,11 @@
 {
-    "comments": {
-        // .ben format doesn't have formal comments
-    },
-    "brackets": [],
-    "autoClosingPairs": [],
-    "surroundingPairs": []
+	"brackets": [
+		["(", ")"]
+	],
+	"autoClosingPairs": [
+		{ "open": "(", "close": ")" }
+	],
+	"surroundingPairs": [
+		["(", ")"]
+	]
 }

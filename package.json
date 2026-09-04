@@ -1,8 +1,12 @@
 {
   "name": "ben-file",
   "displayName": "Ben File",
-  "description": "Extension that supports the ben file type.",
+  "description": "Syntax highlighting and snippets for ben task files.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sp-entertainment/ben-file.git"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -31,5 +35,12 @@
         "path": "./snippets/ben.code-snippets"
       }
     ]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.cjs"
+  },
+  "devDependencies": {
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
   }
 }
