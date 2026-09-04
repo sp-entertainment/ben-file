@@ -1,0 +1,32 @@
+{
+  "Task - Not Started": {
+    "prefix": "ben-task",
+    "body": ["- ${1:task}"],
+    "description": "Not started task"
+  },
+  "Task - Active": {
+    "prefix": "ben-o",
+    "body": ["O - ${1:task}"],
+    "description": "Active task"
+  },
+  "Task - Waiting": {
+    "prefix": "ben-w",
+    "body": ["W - ${1:task}"],
+    "description": "Waiting task"
+  },
+  "Task - Target/Due": {
+    "prefix": "ben-t",
+    "body": ["T - ${1:task}"],
+    "description": "Target/due task"
+  },
+  "Task - Done": {
+    "prefix": "ben-x",
+    "body": ["X - ${1:task}"],
+    "description": "Done task"
+  },
+  "Subtask (indented)": {
+    "prefix": "ben-sub",
+    "body": ["    - ${1:subtask}"],
+    "description": "Indented subtask"
+  }
+}
